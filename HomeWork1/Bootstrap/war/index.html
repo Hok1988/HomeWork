@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="container">
+    <div class="row_header">
+      <div class="navbar navbar-default navbar-fixed-top">
+      	<div class="container">
+      	  <div class="navbar-header">
+      	    <a class="navbar-brand" href="index.html"><b>BOOTSTRAP 3</b></a>
+      	  </div>
+      	  <div class="collapse navbar-collapse" id="responsive-menu">
+      	    <ul class="nav navbar-nav">
+            <li><a href="index.html">Overview</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Grid system<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="grid_intro.html">Introduction</a></li>
+                  <li><a href="grid_ex.html">Examples</a></li>
+                  <li><a href="grid_col.html">Columns</a></li>
+              </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Typography<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="typo_head.html">Heading</a></li>
+                  <li><a href="typo_body.html">Body</a></li>
+                  <li><a href="typo_text.html">Text</a></li>
+              </ul>
+              </li>
+              <li><a href="google_maps.html" style="float:right;">Google Map</a></li>
+            </ul>
+      	  </div>
+      	</div>
+      </div>
+    </div>
+  </div>
+<div class="container-fluid">
+    <div class="row_container">
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 connoc">
+      <h2>HTML5 doctype</h2>
+      <p>Bootstrap makes use of certain HTML elements and CSS properties that require the use of the  HTML5 doctype. Include it at the beginning of all your projects.</p> 
+      <pre><code class=language-html data-lang=html><span class=cp>&lt;!DOCTYPE html&gt;</span>
+<span class=nt>&lt;html</span> <span class=na>lang=</span><span class=s>"en"</span><span class=nt>&gt;</span>
+...
+<span class=nt>&lt;/html&gt;</span></code></pre>
+<h2 id=overview-mobile>Mobile first</h2>
+<p>With Bootstrap 2, we added optional mobile friendly styles for key aspects of the framework. With Bootstrap 3, we've rewritten the project to be mobile friendly from the start. Instead of adding on optional mobile styles, they're baked right into the core. In fact, <strong>Bootstrap is mobile first</strong>. Mobile first styles can be found throughout the entire library instead of in separate files.</p> <p>To ensure proper rendering and touch zooming, <strong>add the viewport meta tag</strong> to your 
+<code>&lt;head&gt;</code>.</p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;meta</span> <span class=na>name=</span><span class=s>"viewport"</span> <span class=na>content=</span><span class=s>"width=device-width, initial-scale=1"</span><span class=nt>&gt;</span></code></pre></figure> 
+<p>You can disable zooming capabilities on mobile devices by adding <code>user-scalable=no</code> to the viewport meta tag. This disables zooming, meaning users are only able to scroll, and results in your site feeling a bit more like a native application. Overall, we don't recommend this on every site, so use caution!</p> 
+<pre><code class=language-html data-lang=html><span class=nt>&lt;meta</span> <span class=na>name=</span><span class=s>"viewport"</span> <span class=na>content=</span><span class=s>"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span><span class=nt>&gt;</span></code></pre>
+ <h2 id=overview-type-links>Typography and links</h2> <p>Bootstrap sets basic global display, typography, and link styles. Specifically, we:</p> <ul> <li>Set <code>background-color: #fff;</code> on the <code>body</code></li> <li>Use the <code>@font-family-base</code>, <code>@font-size-base</code>, and <code>@line-height-base</code> attributes as our typographic base</li> <li>Set the global link color via <code>@link-color</code> and apply link underlines only on <code>:hover</code></li> </ul> <p>These styles can be found within <code>scaffolding.less</code>.</p> <h2 id=overview-normalize>Normalize.css</h2> <p>For improved cross-browser rendering, we use <a href=http://necolas.github.io/normalize.css/ target=_blank>Normalize.css</a>, a project by <a href=https://twitter.com/necolas target=_blank>Nicolas Gallagher</a> and <a href=https://twitter.com/jon_neal target=_blank>Jonathan Neal</a>.</p> <h2 id=overview-container>Containers</h2> <p>Bootstrap requires a containing element to wrap site contents and house our grid system. You may choose one of two containers to use in your projects. Note that, due to <code>padding</code> and more, neither container is nestable.</p> <p>Use <code>.container</code> for a responsive fixed width container.</p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"container"</span><span class=nt>&gt;</span>
+  ...
+<span class=nt>&lt;/div&gt;</span></code></pre></figure> <p>Use <code>.container-fluid</code> for a full width container, spanning the entire width of your viewport.</p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"container-fluid"</span><span class=nt>&gt;</span>
+      </div>
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+    </div>
+</div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>

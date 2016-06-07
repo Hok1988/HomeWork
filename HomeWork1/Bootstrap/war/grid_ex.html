@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="container">
+    <div class="row_header">
+      <div class="navbar navbar-default navbar-fixed-top">
+      	<div class="container">
+      	  <div class="navbar-header">
+      	    <a class="navbar-brand" href="#"><b>BOOTSTRAP 3</b></a>
+      	  </div>
+      	  <div class="collapse navbar-collapse" id="responsive-menu">
+	        <ul class="nav navbar-nav">
+            <li><a href="index.html">Overview</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Grid system<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="grid_intro.html">Introduction</a></li>
+                  <li><a href="grid_ex.html">Examples</a></li>
+                  <li><a href="grid_col.html">Columns</a></li>
+              </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Typography<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="typo_head.html">Heading</a></li>
+                  <li><a href="typo_body.html">Body</a></li>
+                  <li><a href="typo_text.html">Text</a></li>
+              </ul>
+              </li>
+              <li><a href="google_maps.html" style="float:right;">Google Map</a></li>
+            </ul>
+      	</div>
+      </div>
+    </div>
+  </div>
+  </div>
+<div class="container-fluid">
+    <div class="row_container">
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 connoc">
+<div class=bs-docs-section> <h2 id=grid-example-basic>Example: Stacked-to-horizontal</h2> <p>Using a single set of <code>.col-md-*</code> grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices. Place grid columns in any <code>.row</code>.</p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-1"</span><span class=nt>&gt;</span>.col-md-1<span class=nt>&lt;/div&gt;</span>
+<span class=nt>&lt;/div&gt;</span>
+<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-8"</span><span class=nt>&gt;</span>.col-md-8<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-4"</span><span class=nt>&gt;</span>.col-md-4<span class=nt>&lt;/div&gt;</span>
+<span class=nt>&lt;/div&gt;</span>
+<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-4"</span><span class=nt>&gt;</span>.col-md-4<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-4"</span><span class=nt>&gt;</span>.col-md-4<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-4"</span><span class=nt>&gt;</span>.col-md-4<span class=nt>&lt;/div&gt;</span>
+<span class=nt>&lt;/div&gt;</span>
+<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-6"</span><span class=nt>&gt;</span>.col-md-6<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-md-6"</span><span class=nt>&gt;</span>.col-md-6<span class=nt>&lt;/div&gt;</span>
+<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h2 id=grid-example-fluid>Example: Fluid container</h2> <p>Turn any fixed-width grid layout into a full-width layout by changing your outermost <code>.container</code> to <code>.container-fluid</code>.</p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"container-fluid"</span><span class=nt>&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
+    ...
+  <span class=nt>&lt;/div&gt;</span>
+<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h2 id=grid-example-mixed>Example: Mobile and desktop</h2> <p>Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding <code>.col-xs-*</code> <code>.col-md-*</code> to your columns. See the example below for a better idea of how it all works.</p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=c>&lt;!-- Stack the columns on mobile by making one full-width and the other half-width --&gt;</span>
+<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-12 col-md-8"</span><span class=nt>&gt;</span>.col-xs-12 .col-md-8<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-md-4"</span><span class=nt>&gt;</span>.col-xs-6 .col-md-4<span class=nt>&lt;/div&gt;</span>
+<span class=nt>&lt;/div&gt;</span>
+
+<span class=c>&lt;!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --&gt;</span>
+<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-md-4"</span><span class=nt>&gt;</span>.col-xs-6 .col-md-4<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-md-4"</span><span class=nt>&gt;</span>.col-xs-6 .col-md-4<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-md-4"</span><span class=nt>&gt;</span>.col-xs-6 .col-md-4<span class=nt>&lt;/div&gt;</span>
+<span class=nt>&lt;/div&gt;</span>
+
+<span class=c>&lt;!-- Columns are always 50% wide, on mobile and desktop --&gt;</span>
+<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6"</span><span class=nt>&gt;</span>.col-xs-6<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6"</span><span class=nt>&gt;</span>.col-xs-6<span class=nt>&lt;/div&gt;</span>
+<span class=nt>&lt;/div&gt;</span></code></pre></figure> <h2 id=grid-example-mixed-complete>Example: Mobile, tablet, desktop</h2> <p>Build on the previous example by creating even more dynamic and powerful layouts with tablet <code>.col-sm-*</code> classes.</p> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-12 col-sm-6 col-md-8"</span><span class=nt>&gt;</span>.col-xs-12 .col-sm-6 .col-md-8<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-md-4"</span><span class=nt>&gt;</span>.col-xs-6 .col-md-4<span class=nt>&lt;/div&gt;</span>
+<span class=nt>&lt;/div&gt;</span>
+<span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"row"</span><span class=nt>&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-sm-4"</span><span class=nt>&gt;</span>.col-xs-6 .col-sm-4<span class=nt>&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-sm-4"</span><span class=nt>&gt;</span>.col-xs-6 .col-sm-4<span class=nt>&lt;/div&gt;</span>
+  <span class=c>&lt;!-- Optional: clear the XS cols if their content doesn't match in height --&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"clearfix visible-xs-block"</span><span class=nt>&gt;&lt;/div&gt;</span>
+  <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"col-xs-6 col-sm-4"</span><span class=nt>&gt;</span>.col-xs-6 .col-sm-4<span class=nt>&lt;/div&gt;</span>
+<span class=nt>&lt;/div&gt;</span></code></pre></figure>
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+    </div>
+</div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
+
+

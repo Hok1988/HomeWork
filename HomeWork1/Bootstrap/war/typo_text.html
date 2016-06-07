@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="container">
+    <div class="row_header">
+      <div class="navbar navbar-default navbar-fixed-top">
+      	<div class="container">
+      	  <div class="navbar-header">
+      	    <a class="navbar-brand" href="#"><b>BOOTSTRAP 3</b></a>
+      	  </div>
+      	  <div class="collapse navbar-collapse" id="responsive-menu">
+  <ul class="nav navbar-nav">
+            <li><a href="index.html">Overview</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Grid system<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="grid_intro.html">Introduction</a></li>
+                  <li><a href="grid_ex.html">Examples</a></li>
+                  <li><a href="grid_col.html">Columns</a></li>
+              </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Typography<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="typo_head.html">Heading</a></li>
+                  <li><a href="typo_body.html">Body</a></li>
+                  <li><a href="typo_text.html">Text</a></li>
+              </ul>
+              </li>
+              <li><a href="google_maps.html" style="float:right;">Google Map</a></li>
+            </ul>
+      	  </div>
+      	</div>
+      </div>
+    </div>
+  </div>
+<div class="container-fluid">
+    <div class="row_container">
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 connoc">
+      <h2 id=type-inline-text>Inline text elements</h2> <h3>Marked text</h3> <p>For highlighting a run of text due to its relevance in another context, use the <code>&lt;mark&gt;</code> tag.</p> <div class=bs-example data-example-id=simple-mark> <p>You can use the mark tag to <mark>highlight</mark> text.</p> </div> <figure class=highlight><pre><code class=language-html data-lang=html>You can use the mark tag to <span class=nt>&lt;mark&gt;</span>highlight<span class=nt>&lt;/mark&gt;</span> text.</code></pre></figure> <h3>Deleted text</h3> <p>For indicating blocks of text that have been deleted use the <code>&lt;del&gt;</code> tag.</p> <div class=bs-example data-example-id=simple-del> <p><del>This line of text is meant to be treated as deleted text.</del></p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;del&gt;</span>This line of text is meant to be treated as deleted text.<span class=nt>&lt;/del&gt;</span></code></pre></figure> <h3>Strikethrough text</h3> <p>For indicating blocks of text that are no longer relevant use the <code>&lt;s&gt;</code> tag.</p> <div class=bs-example data-example-id=simple-s> <p><s>This line of text is meant to be treated as no longer accurate.</s></p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;s&gt;</span>This line of text is meant to be treated as no longer accurate.<span class=nt>&lt;/s&gt;</span></code></pre></figure> <h3>Inserted text</h3> <p>For indicating additions to the document use the <code>&lt;ins&gt;</code> tag.</p> <div class=bs-example data-example-id=simple-ins> <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;ins&gt;</span>This line of text is meant to be treated as an addition to the document.<span class=nt>&lt;/ins&gt;</span></code></pre></figure> <h3>Underlined text</h3> <p>To underline text use the <code>&lt;u&gt;</code> tag.</p> <div class=bs-example data-example-id=simple-u> <p><u>This line of text will render as underlined</u></p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;u&gt;</span>This line of text will render as underlined<span class=nt>&lt;/u&gt;</span></code></pre></figure> <p>Make use of HTML's default emphasis tags with lightweight styles.</p> <h3>Small text</h3> <p>For de-emphasizing inline or blocks of text, use the <code>&lt;small&gt;</code> tag to set text at 85% the size of the parent. Heading elements receive their own <code>font-size</code> for nested <code>&lt;small&gt;</code> elements.</p> <p>You may alternatively use an inline element with <code>.small</code> in place of any <code>&lt;small&gt;</code>.</p> <div class=bs-example data-example-id=simple-small> <p><small>This line of text is meant to be treated as fine print.</small></p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;small&gt;</span>This line of text is meant to be treated as fine print.<span class=nt>&lt;/small&gt;</span></code></pre></figure> <h3>Bold</h3> <p>For emphasizing a snippet of text with a heavier font-weight.</p> <div class=bs-example data-example-id=simple-strong> <p>The following snippet of text is <strong>rendered as bold text</strong>.</p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;strong&gt;</span>rendered as bold text<span class=nt>&lt;/strong&gt;</span></code></pre></figure> <h3>Italics</h3> <p>For emphasizing a snippet of text with italics.</p> <div class=bs-example data-example-id=simple-em> <p>The following snippet of text is <em>rendered as italicized text</em>.</p> </div> <figure class=highlight><pre><code class=language-html data-lang=html><span class=nt>&lt;em&gt;</span>rendered as italicized text<span class=nt>&lt;/em&gt;</span></code></pre></figure> <div class="bs-callout bs-callout-info" id=callout-type-b-i-elems> <h4>Alternate elements</h4> <p>Feel free to use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> in HTML5. <code>&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance while <code>&lt;i&gt;</code> is mostly for voice, technical terms, etc.</p> </div> 
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+    </div>
+</div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>

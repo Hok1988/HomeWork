@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+<head>
+<title> </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+</head>
+ 
+<script src="jquery-2.1.0.min.js"></script>
+<script>
+  $( function() {
+	  $('#answer_random').load("/massive?func=default");
+	  $('#compare').click(function() { 
+			var var1 = $('#varCompare1').val(); 
+			var var2 = $('#varCompare2').val(); 
+
+			$('#result1').load("/massive?var1="+var1+"&var2="+var2+"&func=compare"); 
+	  } );
+	  $('#solve').click(function() { 
+			var var1 = $('#varSolve1').val(); 
+			var var2 = $('#varSolve2').val(); 
+			var var3 = $('#varSolve3').val();
+
+			$('#result2').load("/massive?var1="+var1+"&var2="+var2+"&var3="+var3+"&func=solve"); 
+	  } );
+	  $('#result3').load("/massive?func=result3");
+  } );
+</script>
+<body>
+<span style="color:red" id="answer_random"></span> 
+ <form>
+<p>Input 2 numbers to compare with 10:</p>
+<input id="varCompare1" type="text"/>
+<input id="varCompare2" type="text"/>
+</form>
+<button id="compare">Compare</button>
+<p>
+Result 3.1:
+<b><span style="color:blue" id="result1"></span></b></p>  
+ <form>
+<p>Input 3 numbers, a, b, c to solve equation ax^2+bx+c=0</p>
+<input id="varSolve1" type="text"/>
+<input id="varSolve2" type="text"/>
+<input id="varSolve3" type="text"/>
+</form>
+<button id="solve">Compare</button>
+<p>
+Result 3.2:
+<b><span style="color:blue" id="result2"></span></b></p> <br/>
+
+ Result 3.3:
+<div style="color:blue" id="result3"></div>
+ </body>
+</html>

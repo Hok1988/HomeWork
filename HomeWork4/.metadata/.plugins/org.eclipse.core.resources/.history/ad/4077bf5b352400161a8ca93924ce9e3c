@@ -1,0 +1,33 @@
+package com.example.Massive;
+import java.io.IOException;
+import javax.servlet.http.*;
+
+@SuppressWarnings("serial")
+public class MassiveServlet extends HttpServlet {
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		resp.setContentType("text/plain");
+		if(!req.getParameter("var1").equals("") && !req.getParameter("var2").equals(""))
+		{
+			
+			String var1 = req.getParameter("var1");	            
+			String var2 = req.getParameter("var2");
+		
+			double i1 = Double.parseDouble(var1)
+			double i2 = Double.parseDouble(var2)
+						            
+			String result; 
+			double tempI1=10-i1;
+			double tempI2=10-i2;
+			if((Math.abs(tempI1)-Math.abs(tempI2))>0) result="Число"+var2+"ближе к 10";
+			else if((Math.abs(tempI1)-Math.abs(tempI2))<0) result="Число"+var1+"ближе к 10";
+			else result="Числа одинаково близки к 10";
+			resp.getWriter().println(result);
+		}
+		else 
+		{
+			resp.getWriter().println("Uncorrect numbers");
+		}
+
+		
+	}
+}

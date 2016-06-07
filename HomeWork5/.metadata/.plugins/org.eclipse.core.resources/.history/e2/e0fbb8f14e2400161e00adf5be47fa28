@@ -1,0 +1,6 @@
+
+public class Game {
+	public static void main(String[] args) { 
+        CharacterClass character=new CharacterClass(0, null, null, null, 0, 0, null);
+    } 
+}

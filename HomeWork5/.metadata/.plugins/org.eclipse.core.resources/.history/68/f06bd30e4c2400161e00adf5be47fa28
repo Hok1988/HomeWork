@@ -1,0 +1,14 @@
+import java.util.Date;
+
+
+public class CharacterClass extends CharacterRace{
+	private int typeOfEquipment;
+	private boolean statusOfCretion;
+
+	public CharacterClass(int id, String name, Date dateOfCreation,
+			String SideName, int model, int customization) {
+		super(id, name, dateOfCreation, SideName, model, customization);
+		// TODO Auto-generated constructor stub
+	}
+
+}

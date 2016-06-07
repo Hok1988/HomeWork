@@ -1,0 +1,45 @@
+import java.util.Date;
+
+
+public class GameCharacter {
+	private String name;
+	private Date dateOfCreation;
+	//Activity in game world:
+	private boolean activity; 
+	private int id;
+	
+	public GameCharacter(int id, String name, Date dateOfCreation)
+	{
+		this.name=name;
+		this.dateOfCreation=dateOfCreation;
+		this.id=id;
+	}
+	
+	public String getName()
+	{
+		return this.name;
+	}
+	public Date getDateOfCreation()
+	{
+		return this.dateOfCreation;
+	}
+	public boolean getActivity()
+	{
+		return this.activity;
+	}
+	public int getID()
+	{
+		return this.id;
+	}
+
+	public boolean enterTheGame()
+	{
+		//...Enter the Game
+		return true;
+	}
+	public String statusOfCreation()
+	{
+		//...
+		return "Character Succefull created";
+	}
+}

@@ -1,0 +1,17 @@
+import java.util.Date;
+
+
+public class CharacterRace extends CharacterSide{
+	private String race;
+	//graphical model of race
+	private int model;
+	//type of custmization
+	private int customiztion;
+
+	public CharacterRace(int id, String name, Date dateOfCreation,
+			String SideName, int model, int customization) {
+		super(id, name, dateOfCreation, SideName);
+		// TODO Auto-generated constructor stub
+	}
+	
+}

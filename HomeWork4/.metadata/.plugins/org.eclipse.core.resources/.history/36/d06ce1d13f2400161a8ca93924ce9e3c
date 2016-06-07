@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+<head>
+<title> </title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+</head>
+ 
+<script src="jquery-2.1.0.min.js"></script>
+<script>
+  $( function() {
+	  $('#answer_random').load("/massive?func=default");
+	  $('#compare').click(function() { 
+			var var1 = $('#varCompare1').val(); 
+			var var2 = $('#varCompare2').val(); 
+
+			$('#result1').load("/massive?var1="+var1+"&var2="+var2+"&func=compare"); 
+	  } );
+	  $('#solve').click(function() { 
+			var var1 = $('#varSolve1').val(); 
+			var var2 = $('#varSolve2').val(); 
+			var var3 = $('#varSolve3').val();
+
+			$('#result2').load("/massive?var1="+var1+"&var2="+var2+"&var3="+var3+"&func=solve"); 
+	  } );
+	  $('#result3').load("/massive?func=result3");
+  } );
+</script>
+<body>
+<span style="color:red" id="answer_random"></span> 
+ <form>
+<p>Input 2 numbers to compare with 10:</p>
+<input id="varCompare1" type="text"/>
+<input id="varCompare2" type="text"/>
+</form>
+<button id="compare">Compare</button>
+<p>
+Result:
+<b><span style="color:blue" id="result1"></span></b></p>  
+ <form>
+<p>Input 3 numbers, a, b, c to solve equation ax^2+bx+c=0</p>
+<input id="varSolve1" type="text"/>
+<input id="varSolve2" type="text"/>
+<input id="varSolve3" type="text"/>
+</form>
+<button id="solve">Compare</button>
+<p>
+Result2:
+<b><span style="color:blue" id="result2"></span></b></p> 
+
+ Result3:
+<div style="color:blue" id="result3"></div>
+ Result4:
+<div style="color:blue" id="result4"><table><td><tr>81</tr><tr>49</tr><tr>96</tr><tr>68</tr><tr>68</tr><tr>77</tr><tr>50</tr><tr>11</tr></td><td><tr>32</tr><tr>67</tr><tr>44</tr><tr>82</tr><tr>53</tr><tr>68</tr><tr>80</tr><tr>25</tr></td><td><tr>27</tr><tr>48</tr><tr>92</tr><tr>44</tr><tr>33</tr><tr>83</tr><tr>46</tr><tr>89</tr></td><td><tr>71</tr><tr>10</tr><tr>88</tr><tr>54</tr><tr>59</tr><tr>69</tr><tr>82</tr><tr>45</tr></td><td><tr>91</tr><tr>72</tr><tr>90</tr><tr>86</tr><tr>61</tr><tr>29</tr><tr>77</tr><tr>75</tr></td></table>
+</div>
+ </body>
+</html>

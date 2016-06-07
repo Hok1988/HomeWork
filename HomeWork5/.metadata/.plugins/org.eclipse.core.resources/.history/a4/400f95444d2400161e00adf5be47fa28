@@ -1,0 +1,30 @@
+import java.util.Date;
+
+
+public class CharacterRace extends CharacterSide{
+	private String race;
+	//graphical model of race
+	private int model=0;
+	//type of custmization
+	private int customization=0;
+
+	public CharacterRace(int id, String name, Date dateOfCreation,
+			String SideName, int model, int customization) {
+		super(id, name, dateOfCreation, SideName);
+		// TODO Auto-generated constructor stub
+		this.model=this.selectModel();
+		this.customization=this.selectCustomization();
+	}
+	public int selectModel()
+	{
+		//Some logic
+		model=3;
+		return model;
+	}
+	public int selectCustomization()
+	{
+		//Some logic
+		customization=1;
+		return customization;
+	}
+}

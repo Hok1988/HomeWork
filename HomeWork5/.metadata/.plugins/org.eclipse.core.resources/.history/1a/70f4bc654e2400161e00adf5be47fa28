@@ -1,0 +1,29 @@
+import java.util.Date;
+
+
+public class CharacterSide extends GameCharacter{
+	private String sideName;
+	private String Location;
+	private int locationOfWar;
+	
+	
+	public CharacterSide(int id, String name, Date dateOfCreation, String SideName) {
+		super(id, name, dateOfCreation);
+		// TODO Auto-generated constructor stub
+		switch(SideName)
+		{
+			case "Kors": 
+				this.Location="KorsLocation";
+				this.locationOfWar=0;
+				break;
+			case "Bets": 
+				this.Location="BetsLocation";
+				this.locationOfWar=1;
+				break;
+			case "Acrs": 
+				this.Location="AcrsLocation";
+				this.locationOfWar=2;
+				break;
+		}
+	}
+}

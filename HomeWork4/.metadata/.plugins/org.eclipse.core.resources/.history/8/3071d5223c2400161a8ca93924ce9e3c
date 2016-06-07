@@ -1,0 +1,175 @@
+package com.example.Massive;
+import java.io.IOException;
+
+import javax.servlet.http.*;
+
+@SuppressWarnings("serial")
+public class MassiveServlet extends HttpServlet {
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		resp.setContentType("text/plain");
+		//resp.getWriter().println("Hello, world");
+		//типы данных
+		String func=req.getParameter("func");
+		if(func.equals("default"))
+		{
+			byte b = 127;
+			resp.getWriter().println(b+"<br/>");
+			        
+			short s = 32767;
+			resp.getWriter().println(s+"<br/>");
+			        
+			int i = 999999999;
+			resp.getWriter().println(i+"<br/>");
+			        
+			//для чисел типа long обязательно добавлять 'l'
+			long l = 100l;
+			resp.getWriter().println(l+"<br/>");
+			        
+			//символьный тип данных
+			char c2 = 'c';
+			char c3 = 1200;
+			resp.getWriter().println(c2+"<br/>");
+			resp.getWriter().println(c3+"<br/>");
+			        
+			//в шестнадцатиричной системе счисления
+			char c = 0x0770;
+			resp.getWriter().println(c+"<br/>");
+			        
+			/*
+			//вывод символов
+			for (char c1 = 1200; c1<1300;c1++){
+			System.out.print(c1+" ");
+			        if ((c1 % 10)==0){
+			        	System.out.println("===");
+			        }
+			}*/
+			        
+			//приведение типов
+			resp.getWriter().println((int)c+"<br/>");
+			        
+			int h=3,g=2;
+			resp.getWriter().println(h/g+"<br/>");
+			resp.getWriter().println((float)h/g+"<br/>");
+			        
+			float h1=30000000000000000.0f,g1=2;
+			resp.getWriter().println(h1/g1+"<br/>");
+			resp.getWriter().println((int)(h1/g1)+"<br/>");
+			        
+			resp.getWriter().println("<br/>");
+			float f = 100000000000000000000000000000000000000.0f;
+			resp.getWriter().println(f+"<br/>");
+			double googol = 1e100;
+			double d = 1100.34;
+			boolean bool = true;
+			        
+			//escape-символы
+			resp.getWriter().println(googol+"<br/>");
+			resp.getWriter().print("New line"+"<br/>");
+			        
+			//условный оператор switch
+			int x=1,y=2,z,operation=0;
+			        
+			switch (operation){
+				case 0:
+			        z = x+y;
+			        break;
+			    case 1:
+			        z = x-y;
+			        break;
+			    case 2:
+			        z = x*y;
+			        break;
+			    default:
+			        z = x/y;
+			}
+			resp.getWriter().println("Result: "+z+"<br/>");
+			        
+			//цикл for
+			long factorial=1;
+			for (l=1l;l<10;l++){
+			        factorial*=l;
+			}
+			resp.getWriter().println(factorial+"<br/>");
+			        
+			//массивы
+			int[] m1;
+			int[] m2 = new int[5];
+			int[] m3 = {1,2,3};
+			resp.getWriter().println(m3[0]+"<br/>");
+			        
+			int[][] m4;
+			int[][] m5 = {{1,2},{2}};
+			resp.getWriter().println(m5[0][0]+"<br/>");
+			        
+			String[] str = new String[4];
+			String[] seasons = {"Winter","Spring","Summer","Autumn"};
+			        
+			for(i=0;i<seasons.length;i++){
+				resp.getWriter().println(seasons[i]+"<br/>");
+			}
+	
+			double dd = Math.random();
+			resp.getWriter().println(dd+"<br/>");
+			        
+			int random = (int)(dd*100);
+			resp.getWriter().println(random+"<br/>");
+		}
+		if(func.equals("compare"))
+		{
+			if(!req.getParameter("var1").equals("") && !req.getParameter("var2").equals(""))
+			{
+				
+				String var1 = req.getParameter("var1");	            
+				String var2 = req.getParameter("var2");
+			
+				double i1 = Double.parseDouble(var1);
+				double i2 = Double.parseDouble(var2); 
+							            
+				String result;
+				double tempI1=i1-10;
+				double tempI2=i2-10;
+				if(Math.abs(tempI1)-Math.abs(tempI2)>0) result="Number "+var2+" more close to 10";
+				else if(Math.abs(tempI1)-Math.abs(tempI2)<0) result="Number "+var1+" more close to 10";
+				else result="Both numbers equally close to 10";
+				resp.getWriter().println(result);
+			}
+			else 
+			{
+				resp.getWriter().println("Uncorrect numbers");
+			}
+		}
+		if(func.equals("solve"))
+		{
+			if(!req.getParameter("var1").equals("") && !req.getParameter("var2").equals("") && !req.getParameter("var3").equals(""))
+			{
+				
+				String var1 = req.getParameter("var1");	            
+				String var2 = req.getParameter("var2");
+				String var3 = req.getParameter("var3");
+			
+				double i1 = Double.parseDouble(var1);
+				double i2 = Double.parseDouble(var2); 
+				double i3 = Double.parseDouble(var3); 
+				
+				String result="equation "+var1+"x^2 + "+var2+"x + "+var3;
+							            
+				double D;
+				double X1;
+				double X2;
+				D=Math.pow(i2, 2)-4*i1*i3;
+				if(D<0) result+=" have no solutions, discriminant<0";
+				else
+				{
+					X1=(Math.pow(Math.pow(i2, 2)-4*i1*i3, 0.5)-i2)/(2*i1);
+					X2=(-Math.pow(Math.pow(i2, 2)-4*i1*i3, 0.5)-i2)/(2*i1);
+					result+=" have solutions: "+X1+" and "+X2;
+				}
+				resp.getWriter().println(result);
+			}
+			else 
+			{
+				resp.getWriter().println("Uncorrect numbers");
+			}
+		}
+	}
+}
